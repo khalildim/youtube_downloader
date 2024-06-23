@@ -71,9 +71,9 @@ class Downloader:
         except subprocess.CalledProcessError as e:
             print(f"Error merging video and audio: {e}")
 
-    @staticmethod
-    def check_if_exist(file_name, path):
-        output_path = path / f"{file_name}.mp4"
+
+    def check_if_exist(self,file_name, path):
+        output_path = path / f"{self.sanitize_title(file_name)}.mp4"
         return output_path.exists()
 
 
