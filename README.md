@@ -6,8 +6,7 @@ here [![Download](https://img.shields.io/badge/Download-MyApp-blue)](https://git
 
 if you want to support me so you can [![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://buymeacoffee.com/khalil_dim)
 
-![![image](https://github.com/khalildim/youtube_video_downloader/assets/109803058/cc9b6ad2-046e-4b91-a4be-e894915c80c7)
-](https://github.com/khalildim/youtube_video_downloader/assets/109803058/c0b3ae55-a3dd-4a6f-b73b-da92a693a13a)
+![![image](https://github.com/khalildim/youtube_video_downloader/assets/109803058/cc9b6ad2-046e-4b91-a4be-e894915c80c7)]
 
 
 
