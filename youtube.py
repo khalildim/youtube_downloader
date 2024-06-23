@@ -5,7 +5,7 @@ from pprint import pprint
 from pytube import YouTube
 import os
 from check_connection import Connection
-
+import re
 
 class Downloader:
     def __init__(self, url):
@@ -32,6 +32,10 @@ class Downloader:
         except Exception as e:
             print(f"There is an error: {e}")
 
+    def sanitize_title(self, title):
+        """Sanitize the title to remove invalid characters for filenames."""
+        return re.sub(r'[<>:"/\\|?*]', '', title).replace(" ", "_")
+
     def download(self, res, output_path,call):
         try:
 
@@ -47,7 +51,7 @@ class Downloader:
             audio_path = audio_stream.download(output_path=output_path, filename='audio') if audio_stream else None
 
             if video_path and audio_path:
-                merged_video_path = output_path / f"{video_stream.title}.mp4"
+                merged_video_path = output_path / f"{self.sanitize_title(video_stream.title)}.mp4"
                 self.merge_video_audio(video_path, audio_path, merged_video_path)
                 return video_path, audio_path
             else:
